@@ -5,7 +5,7 @@ on:
     inputs:
       destroy:
         description: 'Destroy resources'
-       
+          
 
 
 jobs:
@@ -25,10 +25,6 @@ jobs:
 
     - name: Initialize Terraform
       run: terraform init
-      working-directory: module/
-
-    - name: Plan Terraform
-      run: terraform plan -var-file=rakesh.tfvars -out=tfplan
       working-directory: module/
 
     - name: Destroy Terraform

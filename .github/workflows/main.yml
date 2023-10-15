@@ -24,6 +24,6 @@ jobs:
       uses: hashicorp/setup-terraform@v1
 
 
-    - name: Destroy Terraform
-      run: terraform destroy -auto-approve "tfplan"
+    - name: Destroy Resources
       working-directory: module/
+      run: terraform destroy -var-file=rakesh.tfvars  -auto-approve 
